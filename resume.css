@@ -1,114 +1,172 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #f8f9fa;
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Resume Container */
 .resume-container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
-    border-radius: 8px;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
+/* Left Column */
 .resume-left {
     flex: 0 0 35%;
-    text-align: center;
-    background-color: #d88c47;
+    background-color: #343a40;
     color: white;
-    padding: 3rem;
+    padding: 2rem;
+    text-align: left;
 }
 
-.resume-left h1 {
+.resume-left h3 {
+    font-size: 1.4rem;
+    color: #f8f9fa;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+}
+
+.resume-left p,
+.resume-left ul li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #dcdcdc;
+    display: flex;
+    align-items: center;
+}
+
+.resume-left p i,
+.resume-left ul li i {
+    margin-right: 0.8rem;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.resume-left ul li {
+    background-color: #495057;
+    border-radius: 5px;
+    padding: 0.6rem;
+}
+
+.resume-left ul li:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Right Column */
+.resume-right {
+    flex: 1;
+    padding: 2rem;
+}
+
+.resume-right h1 {
     font-size: 2rem;
+    color: #212529;
     margin-bottom: 0.5rem;
 }
 
-.resume-left h2 {
+.resume-right h2 {
     font-size: 1.4rem;
-    color: #f0e5db;
+    color: #6c757d;
     margin-bottom: 1.5rem;
 }
 
-.career-objective {
-    margin-top: 1.5rem;
+.career-objective,
+.about-me {
+    margin-bottom: 1.5rem;
 }
 
-.career-objective h3 {
-    font-size: 1.5rem;
-    color: white;
+.career-objective h3,
+.about-me h3 {
+    font-size: 1.4rem;
+    color: #007bff;
     margin-bottom: 0.8rem;
 }
 
-.career-objective p {
+.career-objective p,
+.about-me p {
     font-size: 1rem;
-    color: #f0e5db;
+    color: #495057;
 }
 
-.resume-right {
-    flex: 1;
-    background-color: white;
-    padding: 3rem;
-}
-
-.resume-section {
-    margin-bottom: 2rem;
-}
-
-.resume-section h3 {
-    font-size: 1.6rem;
-    color: #2c3e50;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 0.5rem;
+.resume-right h3 {
+    font-size: 1.4rem;
+    color: #007bff;
     margin-bottom: 1rem;
 }
 
-.resume-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.resume-section ul li {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 0.8rem;
-    border-radius: 5px;
+.resume-right p,
+.resume-right ul li {
+    font-size: 1rem;
+    color: #495057;
     margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    color: #333;
 }
 
-.resume-section ul li:hover {
-    background-color: #e3f2fd;
-    border-color: #2980b9;
+.resume-right ul li {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.6rem;
+    border-radius: 5px;
 }
 
+.resume-right ul li:hover {
+    background-color: #e9ecef;
+    border-color: #007bff;
+}
+
+/* Print Button */
 .print-container {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .print-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .print-container button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .resume-left,
+    .resume-right {
+        flex: 1;
+    }
+    .resume-left {
+        padding: 1.5rem;
+    }
+    .resume-right {
+        padding: 1.5rem;
+    }
 }

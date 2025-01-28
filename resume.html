@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="resume-container">
+        <!-- Left Column -->
         <div class="resume-left">
-            <h1 id="resumeName">Your Name</h1>
-            <h2 id="resumeRole">Your Role</h2>
-
-            <div class="career-objective">
-                <h3>About Me</h3>
-                <p id="resumeAboutMe">Your About Me</p>
-            </div>
-
-            <div class="career-objective">
-                <h3>Career Objective</h3>
-                <p id="resumeCareerObjective">Your Career Objective</p>
-            </div>
-        </div>
-        <div class="resume-right">
             <div class="resume-section">
                 <h3>Contact</h3>
-                <p>Email: <span id="resumeEmail">Your Email</span></p>
-                <p>Phone: <span id="resumePhone">Your Phone</span></p>
-                <p>GitHub: <a href="#" id="resumeGithub" target="_blank">Your GitHub</a></p>
-                <p>LinkedIn: <a href="#" id="resumeLinkedin" target="_blank">Your LinkedIn</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <span id="resumeEmail">Your Email</span></p>
+                <p><i class="fas fa-phone"></i> Phone: <span id="resumePhone">Your Phone</span></p>
+                <p><i class="fab fa-github"></i> GitHub: <a href="#" id="resumeGithub" target="_blank">Your GitHub</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#" id="resumeLinkedin" target="_blank">Your LinkedIn</a></p>
             </div>
             <div class="resume-section">
                 <h3>Languages</h3>
                 <ul id="resumeLanguages"></ul>
             </div>
+            <div class="resume-section">
+                <h3>Certificates</h3>
+                <ul id="resumeCertificates"></ul>
+            </div>
+            <div class="resume-section">
+                <h3>Experience</h3>
+                <ul id="resumeExperience"></ul>
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="resume-right">
+            <h1 id="resumeName">Your Name</h1>
+            <h2 id="resumeRole">Your Role</h2>
+
+            <div class="career-objective">
+                <h3>Career Objective</h3>
+                <p id="resumeCareerObjective">Your Career Objective</p>
+            </div>
+
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p id="resumeAboutMe">Your About Me</p>
+            </div>
+
             <div class="resume-section">
                 <h3>Skills</h3>
                 <ul id="resumeSkills"></ul>
@@ -41,14 +53,6 @@
             <div class="resume-section">
                 <h3>Education</h3>
                 <ul id="resumeEducation"></ul>
-            </div>
-            <div class="resume-section">
-                <h3>Experience</h3>
-                <ul id="resumeExperience"></ul>
-            </div>
-            <div class="resume-section">
-                <h3>Certificates</h3>
-                <ul id="resumeCertificates"></ul>
             </div>
         </div>
     </div>
